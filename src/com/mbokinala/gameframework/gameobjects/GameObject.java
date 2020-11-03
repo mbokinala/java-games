@@ -1,4 +1,4 @@
-package com.mbokinala.gameframework;
+package com.mbokinala.gameframework.gameobjects;
 
 import java.awt.Graphics;
 import java.awt.Rectangle;

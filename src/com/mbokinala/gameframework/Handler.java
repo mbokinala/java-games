@@ -3,6 +3,8 @@ package com.mbokinala.gameframework;
 import java.awt.Graphics;
 import java.util.LinkedList;
 
+import com.mbokinala.gameframework.gameobjects.GameObject;
+
 public class Handler {
 	LinkedList<GameObject> gameObjects = new LinkedList<GameObject>();
 	
