@@ -9,10 +9,13 @@ public class Game extends Canvas implements Runnable {
 	
 	private boolean isRunning = false;
 	private Thread thread;
+	private Handler handler;
 	
 	public Game() {
 		new Window(1000, 563, "Basic Game", this);
 		start();
+		
+		handler = new Handler();
 	}
 	
 	private void start() {
@@ -56,14 +59,13 @@ public class Game extends Canvas implements Runnable {
 				frames = 0;
 			}
 			
-			System.out.println("frames: " + frames);
 		}
 		
 		stop();
 	}
 	
 	public void update() {
-		
+		handler.update();
 	}
 	
 	public void render() {
@@ -77,6 +79,8 @@ public class Game extends Canvas implements Runnable {
 		
 		g.setColor(Color.red);
 		g.fillRect(0, 0, 1000, 563);
+		
+		handler.render(g);
 		
 		g.dispose();
 		bufferStrategy.show();
