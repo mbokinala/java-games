@@ -5,6 +5,9 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.image.BufferStrategy;
 
+import com.mbokinala.gameframework.gameobjects.Box;
+import com.mbokinala.gameframework.gameobjects.ID;
+
 public class Game extends Canvas implements Runnable {
 	
 	private boolean isRunning = false;
@@ -16,6 +19,7 @@ public class Game extends Canvas implements Runnable {
 		start();
 		
 		handler = new Handler();
+		handler.addGameObject(new Box(30, 30, ID.Block));
 	}
 	
 	private void start() {
